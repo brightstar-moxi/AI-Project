@@ -1,6 +1,6 @@
-import type { Config } from "tailwindcss";
+/** @type {import("tailwindcss").Config } */
 
-export default {
+module.exports= {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -52,8 +52,11 @@ export default {
          
     },
     borderRadius: {
-      
+lg:'var(--radius)',
+md: 'calc(var(--radius) - 2px)',
+sm: 'calc(var(--radius) - 4px)'
     }
+  }
   },
-  plugins: [],
-} satisfies Config;
+  plugins: [require("tailwindcss-animate")],
+};
