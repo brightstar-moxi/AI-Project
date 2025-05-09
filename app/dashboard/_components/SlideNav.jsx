@@ -1,5 +1,5 @@
 
-import { PanelsTopLeft } from 'lucide-react'
+import { CircleUserIcon, FileVideo, PanelsTopLeft, ShieldPlus } from 'lucide-react'
 import React from 'react'
 
 const SlideNav = () => {
@@ -15,19 +15,19 @@ const SlideNav = () => {
             id:1,
             name:"Create New",
             path:'/create-new',
-            icon:PanelsTopLeft
+            icon:FileVideo
         },
         {
             id:1,
             name:"Upgrade",
             path:'/upgrade',
-            icon:PanelsTopLeft
+            icon:ShieldPlus
         },
         {
             id:1,
             name:"Account",
             path:'/account',
-            icon:PanelsTopLeft
+            icon:CircleUserIcon
         },
         // {
         //     id:1,
@@ -37,7 +37,16 @@ const SlideNav = () => {
         // },
     ]
   return (
-    <div className='w-64 h-screen shodow-md p-5'>SlideNav</div>
+    <div className='w-64 h-screen shodow-md p-5'>
+        <div>
+            {MenOption.map((item,index)=>(
+                <div className='flex items-center gap-3 p-3'>
+                <item.icon/>
+                <h2>{item.name}</h2>
+                </div>
+            ))}
+        </div>
+    </div>
   )
 }
 
