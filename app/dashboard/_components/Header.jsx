@@ -11,7 +11,7 @@ const Header = () => {
        <h2 className='font-bold text-xl'> Brightstar AI Vid</h2>
         </div>
         <div className='flex gap-3 items-center'>
-            <Button>Dashboard</Button>
+            <Button className='bg-[#8338ec]'>Dashboard</Button>
             <UserButton/>
         </div>
     </div>
