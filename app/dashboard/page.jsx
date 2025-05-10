@@ -2,6 +2,7 @@
 import { Button } from '@/components/ui/button'
 import React, { useState } from 'react'
 import EmptyState from './_components/EmptyState'
+import Link from 'next/link'
 
 const Dashboard = () => {
   const  [videoList,setVideList]=useState([])
@@ -9,7 +10,9 @@ const Dashboard = () => {
     <div>
       <div className='flex justify-between items-baseline-last'>
         <h2 className='font-bold text-2xl text-[#8338ec]'>Dashboard</h2>
-        <Button className='bg-[#8338ec]'>+ Create New</Button>
+        <Link href={'/dashboard/create-new'}>
+                <Button className="bg-[#8338ec]">+ Create Video</Button>
+            </Link>
       </div>
 
       {/* Empty State */}
