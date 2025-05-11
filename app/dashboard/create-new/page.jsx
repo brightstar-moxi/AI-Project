@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { SelectTopic } from './_components/SelectTopic'
+import { SelectStyle } from './_components/SelectStyle'
 
 const CreateNew = () => {
 
@@ -16,7 +17,7 @@ console.log(fieldName,fieldValue);
       {/* Select Topic  */}
 <SelectTopic onUserSelect={onHandleInputChage}/>
       {/* Select Style */}
-
+<SelectStyle/>
       {/* Duration */}
 
       {/* Create Button */}
