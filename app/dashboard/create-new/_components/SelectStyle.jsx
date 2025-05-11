@@ -25,13 +25,15 @@ export const SelectStyle = () => {
         },
     ]
   return (
-    <div>
+    <div className='mt-7'>
         <h2 className='font-bold text-2xl text-[#8338ec]'>Style</h2>
         <p className='text-gray-500'>Select your video style</p>
-        <div>
+        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-5 mt-3'>
             {styleOptions.map((item, index)=>(
                 <div>
-                    <Image src={item.image} alt='A.I image' width={100} height={100}/> 
+                    <Image src={item.image} alt='A.I image' width={100} height={100}
+                    className='h-48 object-cover rounded-lg w-full'
+                    /> 
                 </div>
             ))}
         </div>
