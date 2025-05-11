@@ -16,16 +16,16 @@ export const SelectStyle = () => {
             image:'cartoon.jpeg'
         },
         {
-            name:'Realstic',
-            image:'real.jpg'
+            name:'Comic',
+            image:'comic.png'
         },
         {
-            name:'Realstic',
-            image:'real.jpg'
+            name:'WaterColor',
+            image:'watermark.jpg'
         },
         {
-            name:'Realstic',
-            image:'real.jpg'
+            name:'GTA',
+            image:'gta.jpeg'
         },
     ]
   return (
