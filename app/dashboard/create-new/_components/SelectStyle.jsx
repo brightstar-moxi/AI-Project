@@ -34,6 +34,7 @@ export const SelectStyle = () => {
                     <Image src={item.image} alt='A.I image' width={100} height={100}
                     className='h-48 object-cover rounded-lg w-full'
                     /> 
+                    <h2>{item.name}</h2>
                 </div>
             ))}
         </div>
