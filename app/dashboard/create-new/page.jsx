@@ -17,7 +17,7 @@ console.log(fieldName,fieldValue);
       {/* Select Topic  */}
 <SelectTopic onUserSelect={onHandleInputChage}/>
       {/* Select Style */}
-<SelectStyle/>
+<SelectStyle onUserSelect={onHandleInputChage}/>
       {/* Duration */}
 
       {/* Create Button */}
