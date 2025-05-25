@@ -30,11 +30,11 @@ export const SelectStyle = () => {
         <p className='text-gray-500'>Select your video style</p>
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-5 mt-3'>
             {styleOptions.map((item, index)=>(
-                <div>
+                <div className='relative'>
                     <Image src={item.image} alt='A.I image' width={100} height={100}
                     className='h-48 object-cover rounded-lg w-full'
                     /> 
-                    <h2>{item.name}</h2>
+                    <h2 className='absolute p-1 bg-black bottom-0 w-full text-white text-center'>{item.name}</h2>
                 </div>
             ))}
         </div>
