@@ -3,12 +3,18 @@ import React, { useState } from 'react'
 import { SelectTopic } from './_components/SelectTopic'
 import { SelectStyle } from './_components/SelectStyle'
 import SelectDuration from './_components/SelectDuration'
+import { Button } from '@/components/ui/button'
 
 const CreateNew = () => {
 
   const [formData,setFormData]=useState([])
   const onHandleInputChage=(fieldName, fieldValue)=>{
 console.log(fieldName,fieldValue);
+
+setFormData(prev=>({
+  ...prev,
+  [fieldName]:fieldValue
+}))
 
   }
   return (
@@ -20,8 +26,9 @@ console.log(fieldName,fieldValue);
       {/* Select Style */}
 <SelectStyle onUserSelect={onHandleInputChage}/>
       {/* Duration */}
-<SelectDuration/>
+<SelectDuration onUserSelect={onHandleInputChage}/>
       {/* Create Button */}
+      <Button className='bg-[#8338ec] mt-10 w-full'>Create Short Video</Button>
     </div>
     </div>
   )
