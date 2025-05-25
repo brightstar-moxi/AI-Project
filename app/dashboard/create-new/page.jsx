@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { SelectTopic } from './_components/SelectTopic'
 import { SelectStyle } from './_components/SelectStyle'
+import SelectDuration from './_components/SelectDuration'
 
 const CreateNew = () => {
 
@@ -19,7 +20,7 @@ console.log(fieldName,fieldValue);
       {/* Select Style */}
 <SelectStyle onUserSelect={onHandleInputChage}/>
       {/* Duration */}
-
+<SelectDuration/>
       {/* Create Button */}
     </div>
     </div>
