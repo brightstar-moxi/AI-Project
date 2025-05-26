@@ -17,6 +17,13 @@ setFormData(prev=>({
 }))
 
   }
+
+
+  // Get Video Script
+  const GetVideoScript=()=>{
+    
+  }
+
   return (
     <div className='md:px-20'>
       <h2 className='font-bold text-4xl text-center text-[#8338ec]'>Create New</h2>
