@@ -19,6 +19,10 @@ setFormData(prev=>({
   }
 
 
+  const onCreateClickHandler=()=>{
+    GetVideoScript();
+  }
+
   // Get Video Script
   const GetVideoScript=()=>{
     const prompt = 'Write a script to generate '+formData.duration+' video on topic: '+formData.topic+' along with AI image prompt in '+formData.imageStyle+' format for each scene and give me result in JSON format with imagePrompt and ContentText as field'
@@ -40,7 +44,7 @@ setFormData(prev=>({
       {/* Duration */}
 <SelectDuration onUserSelect={onHandleInputChage}/>
       {/* Create Button */}
-      <Button className='bg-[#8338ec] mt-10 w-full'>Create Short Video</Button>
+      <Button className='bg-[#8338ec] mt-10 w-full' onClick={onCreateClickHandler}>Create Short Video</Button>
     </div>
     </div>
   )
