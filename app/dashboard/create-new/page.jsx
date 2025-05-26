@@ -21,7 +21,12 @@ setFormData(prev=>({
 
   // Get Video Script
   const GetVideoScript=()=>{
+    const prompt = 'Write a script to generate '+formData.duration+' video on topic: '+formData.topic+' along with AI image prompt in '+formData.imageStyle+' format for each scene and give me result in JSON format with imagePrompt and ContentText as field'
+    console.log(prompt);
     
+    // const result =await axios.post('/api/get-video-script',{
+    //   prompt:
+    // })
   }
 
   return (
