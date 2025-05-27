@@ -4,6 +4,7 @@ import { SelectTopic } from './_components/SelectTopic'
 import { SelectStyle } from './_components/SelectStyle'
 import SelectDuration from './_components/SelectDuration'
 import { Button } from '@/components/ui/button'
+import axios from 'axios'
 
 const CreateNew = () => {
 
@@ -24,13 +25,16 @@ setFormData(prev=>({
   }
 
   // Get Video Script
-  const GetVideoScript=()=>{
+  const GetVideoScript=async()=>{
     const prompt = 'Write a script to generate '+formData.duration+' video on topic: '+formData.topic+' along with AI image prompt in '+formData.imageStyle+' format for each scene and give me result in JSON format with imagePrompt and ContentText as field'
     console.log(prompt);
     
-    // const result =await axios.post('/api/get-video-script',{
-    //   prompt:
-    // })
+    const result =await axios.post('/api/get-video-script',{
+      prompt:prompt
+    }).then(resp=>{
+      console.log(resp.data);
+      
+    })
   }
 
   return (

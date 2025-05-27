@@ -2,13 +2,13 @@ const{
     GoogleGenerativeAI,
     HarmCategory,
     HarmBlockThreshold,
-} = require("@google/generative-ai")
+} = require("@google/genai")
 
 const apiKey = process.env.GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({
-    model: 'gemini-2.5-pro-preview-05-06',
+    model: 'gemini-1.5-flash',
 });
 
 const generationConfig = {
@@ -16,6 +16,7 @@ const generationConfig = {
     topP:0.95,
     topK: 64,
 maxOutputTokens: 8192,
+responseMimeType:'application/json'
 };
 
 
@@ -184,3 +185,45 @@ export const chatSession = model.startChat({
 // }
 
 // main();
+
+
+
+
+
+// To run this code, you need to install the following dependencies:
+// npm install @google/genai mime
+
+// const { GoogleGenAI } = require('@google/genai');
+
+
+//   export const ai = new GoogleGenAI({
+//     apiKey: process.env.GEMINI_API_KEY,
+//   });
+
+//   const config = {
+//     responseMimeType: 'application/json',
+//   };
+
+//   const model = 'gemini-2.5-pro-preview-05-06';
+//   const contents = [
+//     {
+//       role: 'user',
+//       parts: [
+//         {
+//           text: `Write a script to generate 30 seconds video on topic: Interesting historical story along with AI image prompt in Realistic format for each scene and give me result in JSON format with imagePrompt and ContentText as field`,
+//         },
+//       ],
+//     },
+//   ];
+
+//   const response = await ai.models.generateContentStream({
+//     model,
+//     config,
+//     contents,
+//   });
+
+//   for await (const chunk of response) {
+//     console.log(chunk.text);
+//   }
+
+
