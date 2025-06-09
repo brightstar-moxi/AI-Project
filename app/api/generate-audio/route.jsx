@@ -26,5 +26,5 @@ export async function POST(req) {
   await writeFile('output.mp3', response.audioContent, 'binary');
   console.log('Audio content written to file: output.mp3');
 
-  return NextResponse.json({Result:"Sucess"});
+  return NextResponse.json({Result:"Success"});
 }

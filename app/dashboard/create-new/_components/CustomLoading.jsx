@@ -15,7 +15,7 @@ function CustomLoading({loading}) {
 
   <DialogContent>
    <div className="flex flex-col items-center my-10 justify-center">
-    <Image src={'/progress.gif'} width={100} height={100}/>
+    <Image src={'/progress.gif'} alt="loading" width={100} height={100}/>
     <h2>Generating your video... Do not Refresh</h2>
    </div>
   </DialogContent>

@@ -5,7 +5,8 @@ import { SelectStyle } from './_components/SelectStyle'
 import SelectDuration from './_components/SelectDuration'
 import { Button } from '@/components/ui/button'
 import axios from 'axios'
-import CustomLoading from './_components/CustomLoading'
+import CustomLoading from './_components/CustomLoading';
+import { v4 as uuidv4 } from 'uuid';
 
 const CreateNew = () => {
 
@@ -39,11 +40,29 @@ setFormData(prev=>({
     }).then(resp=>{
       console.log(resp.data.result);
       setVideoScript(resp.data.result);
-      
+      GenerateAudioFile(resp.data.result)
     });
     setLoading(false);
   }
 
+  const GenerateAudioFile=async(videoScriptData)=>{
+    let script='';
+    const id= uuidv4()
+    videoScriptData.forEach(item => {
+      script=script+item.ContentText+'';
+    });
+
+   await axios.post('/api/generate-audio',{
+    text:script,
+    id:id
+   }
+
+   ).then(resp=>{
+    console.log(resp.data);
+    
+   })
+    
+  }
   return (
     <div className='md:px-20'>
       <h2 className='font-bold text-4xl text-center text-[#8338ec]'>Create New</h2>
