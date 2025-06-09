@@ -5,6 +5,7 @@ import { SelectStyle } from './_components/SelectStyle'
 import SelectDuration from './_components/SelectDuration'
 import { Button } from '@/components/ui/button'
 import axios from 'axios'
+import CustomLoading from './_components/CustomLoading'
 
 const CreateNew = () => {
 
@@ -50,6 +51,7 @@ setFormData(prev=>({
       {/* Create Button */}
       <Button className='bg-[#8338ec] mt-10 w-full' onClick={onCreateClickHandler}>Create Short Video</Button>
     </div>
+    <CustomLoading loading={true}/>
     </div>
   )
 }
